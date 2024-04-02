@@ -1,0 +1,61 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  a,a:hover,a:link,a:visited{
+  color:var(--nav-color);
+  text-decoration: none;
+  }
+  :root{
+  --body-color:#d9ead3;
+  --text-color:#0e2431;
+  --link-color:#f9b248;
+  --secondary-color:#fc3a52;
+  --nav-color:#231010;
+  }
+  body{
+  background-color: #d9ead3;
+  color: var(--text-color);
+  }
+  nav{
+  height:30%;
+  background-color: var(--nav-color);
+  padding:2rem;
+  }
+  nav a{
+  padding: 0 2rem;
+  color: #d9ead3 !important;
+  }
+  h4{
+  background-color: var(--body-color);
+  border-radius: 0.3rem;
+  margin-left:2rem;
+  margin-top:2rem;
+  padding:0.5rem 0.75rem;
+  font-weight:bold;
+  box-shadow:5px 5px #a7a7a7;
+  }
+  #recentlyAdded{
+  width: 75%;
+  float: left;
+  padding-right: 10px;
+  }
+  #favorites{
+  width: 25%;
+  float: right;
+  padding-left: 10px;
+  }
+  /*Styling Sign Up Form*/
+  #signup-form{
+  background-color: var(--link-color);
+  border-radius: 1rem;
+  width:50%;
+  }
+  .btn{
+  background-color:var(--nav-color);
+  color: var(--body-color);
+  }
+  #login-container{
+  border: 5px solid #231010;
+  }
