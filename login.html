@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema Tracker</title>
+    <!-- Google Font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <!-- Bootstrap library -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- FontAwesome library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/public/css/style.css"/>
+  </head>
+  <body>
+    <nav class="container-fluid flex-column align-items-start">
+      <div class="py-2">
+      <ul>
+      <li><a href="/home"><h3>Home</h3></a></li>
+      <li><a href="/dashboard"><h3>Dashboard</h3></a></li>
+      <li style="float:right"><a href="/logout" id="logout"><h3>Logout</h3></a></li>
+      <li style="float:right"><a href="/login" id="login"><h3>Login</h3></a></li>
+      </ul>
+      </div>
+      </nav>
+      <main class="px-3 py-3">
+        <h1>Cinema Tracker</h1>
+<row id="loginContainer">
+  <column id="login">
+    <section class="card">
+        <div class="card-body">
+          <h3 class="card-title">Login</h3>
+          <form id="login-form">
+            <div class="form-group mb-2">
+              <label class="form-label" for="username-login">Username:</label>
+              <input class="form-control" type="text" id="username-login">
+            </div>
+            <div class="form-group mb-2">
+              <label class="form-label" for="password-login">Password:</label>
+              <input class="form-control" type="text" id="password-login">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-dark" type="submit">Login</button>
+            </div>
+          </form>
+        </div>
+    </section>
+  </column>
+  <column id="signup" class="card">
+    <div class="card-body">
+    <h3 class="card-title">Sign Up</h3>
+    <form id="signup-form">
+      <div class="form-group mb-2">
+        <label class="form-label" for="username-signup">Username:</label>
+        <input class="form-control" type="text" id="username-signup">
+      </div>
+      <div class="form-group mb-2">
+        <label class="form-label" for="email-signup">Email:</label>
+        <input class="form-control" type="email" id="email-signup">
+      </div>
+      <div class="form-group mb-2">
+        <label class="form-label" for="password-signup">Password:</label>
+        <input class="form-control" type="text" id="password-signup">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-dark" type="submit">Sign Up</button>
+      </div>
+    </form>
+  </div>
+  </column>
+</row>
+<script src="/public/js/dashboard.js"></script>
+      </main>
+  </body>
+</html>

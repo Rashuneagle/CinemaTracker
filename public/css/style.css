@@ -27,14 +27,32 @@
   padding: 0 2rem;
   color: #d9ead3 !important;
   }
-  h4{
-  background-color: var(--body-color);
-  border-radius: 0.3rem;
-  margin-left:2rem;
-  margin-top:2rem;
-  padding:0.5rem 0.75rem;
-  font-weight:bold;
-  box-shadow:5px 5px #a7a7a7;
+  nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  }
+  nav li {
+  float: left;
+  }
+  nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+  nav li a:hover:not(.active) {
+  background-color: #111;
+  }
+  nav .active {
+  background-color: #04AA6D;
+  }
+  #movies:after, #shows:after {
+  content:"";
+  display:table;
+  clear:both;
   }
   #recentlyAdded{
   width: 75%;
@@ -46,11 +64,27 @@
   float: right;
   padding-left: 10px;
   }
+  #recentlyAdded table, #recentlyAdded img {
+  width: 100%;
+  }
+  #recentlyAdded table td {
+  float:left;
+  width:33.33%;
+  padding:5px;
+  }
+  #favorites li {
+  padding:10px;
+  }
   /*Styling Sign Up Form*/
-  #signup-form{
-  background-color: var(--link-color);
-  border-radius: 1rem;
-  width:50%;
+  #login{
+  width: 50%;
+  float: left;
+  padding-right: 10px;
+  }
+  #signup{
+  width: 50%;
+  float: right;
+  padding-left: 10px;
   }
   .btn{
   background-color:var(--nav-color);
@@ -59,3 +93,27 @@
   #login-container{
   border: 5px solid #231010;
   }
+  /*Styling Movie Listing*/
+  #movie {
+  width: 100%;
+  }
+  #movie:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+  #moviePoster{
+  width: 50%;
+  float: left;
+  padding: 10px;
+  }
+  #movieInfo{
+  width: 50%;
+  float: right;
+  padding: 10px;
+  }
+  #moviePoster img{
+  width: 100%;
+  padding: 10px;
+  }
+  /* Styling New Movie/Show Form */

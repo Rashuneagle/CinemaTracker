@@ -14,58 +14,98 @@
     <link rel="stylesheet" href="/public/css/style.css"/>
   </head>
   <body>
-    <nav class="container-fluid d-flex flex-column align-items-start flex-wrap">
-      <div class="d-flex justify-content-start py-2">
-      <a href="/home">Home</a>
-      <a href="/dashboard">Dashboard</a>
-      <a href="/login" id="login">Login</a>
-      <a href="/logout" id="logout">Logout</a>
+    <nav class="container-fluid flex-column align-items-start">
+      <div class="py-2">
+      <ul>
+      <li><a href="/home"><h3>Home</h3></a></li>
+      <li><a href="/dashboard"><h3>Dashboard</h3></a></li>
+      <li style="float:right"><a href="/logout" id="logout"><h3>Logout</h3></a></li>
+      <li style="float:right"><a href="/login" id="login"><h3>Login</h3></a></li>
+      </ul>
       </div>
-      <h4>Cinema Tracker</h4>
       </nav>
       <main class="px-3 py-3">
-        <h1>Dashboard</h1>
-<section id="recentlyAdded">
-  <section class="card">
-      <div class="card-body">
-        <h3 class="card-title">Recently Added</h3>
-        <table style="width:100%;">
-          <tr>
-            <td style="float:left;width:33.33%;padding:5px;">
-              <img src="/assets/movie-poster-jaws.jpg" style="width:100%;">
-            </td>
-            <td style="float:left;width:33.33%;padding:5px;">
-              <img src="/assets/sub-buzz-817-1649105149-10.jpg" style="width:100%;">
-            </td>
-            <td style="float:left;width:33.33%;padding:5px;">
-              <img src="/assets/titanic.webp" style="width:100%;">
-            </td>
-          </tr>
-        </table>
-        <p class="card-text">{{content}}</p>
-      </div>
-  </section>
-</section>
-<section id="favorites" class="card text-center">
-  <div class="card-body">
-  <h3 class="card-title">Create New Post</h3>
-  <form id="newBlog">
-    <div class="card-text"></div>
-      <label for="title">Title</label><br>
-      <input type="text" id="title" placeholder="title">
-    </div>
-    <div class="card-text"></div>
-      <label for="content">Content</label>
-    <textarea id="content" placeholder="content"></textarea>
-    </div>
-    <button id="create">Create</button>
-</form>
-</div>
-</section>
-<form id="newpost">
-    <button>+ New Post</button>
-</form>
-<script src="/js/dashboard.js"></script>
+        <h1>Cinema Tracker</h1>
+<row id="movies">
+  <column id="recentlyAdded">
+    <section class="card">
+        <div class="card-body">
+          <h3 class="card-title">Recently Added</h3>
+          <table>
+            <tr>
+              <td>
+                <img src="/assets/movie-poster-jaws.jpg">
+              </td>
+              <td>
+                <img src="/assets/sub-buzz-817-1649105149-10.jpg">
+              </td>
+              <td>
+                <img src="/assets/titanic.webp">
+              </td>
+            </tr>
+          </table>
+        </div>
+    </section>
+  </column>
+  <column id="favorites" class="card">
+    <div class="card-body">
+    <h3 class="card-title text-center">My Favorites</h3>
+    <ul>
+      <li>The Godfather</li>
+      <li>Citizen Kane</li>
+      <li>RoboCop</li>
+      <li>The Terminator</li>
+      <li>Young Frankenstein</li>
+      <li>Dracula</li>
+      <li>Platoon</li>
+      <li>The Great Escape</li>
+      <li>Die Hard</li>
+      <li>12 Angry Men</li>
+    </ul>
+  </div>
+  </column>
+</row>
+<br/>
+<row id="shows">
+  <column id="recentlyAdded">
+    <section class="card">
+        <div class="card-body">
+          <h3 class="card-title">Recently Added</h3>
+          <table>
+            <tr>
+              <td>
+                <img src="/assets/the-sopranos.jpg">
+              </td>
+              <td>
+                <img src="/assets/the-walking-dead.jpg">
+              </td>
+              <td>
+                <img src="/assets/smiling-friends.jpg">
+              </td>
+            </tr>
+          </table>
+        </div>
+    </section>
+  </column>
+  <column id="favorites" class="card">
+    <div class="card-body">
+    <h3 class="card-title text-center">My Favorites</h3>
+    <ul>
+      <li>The Sopranos</li>
+      <li>The Walking Dead</li>
+      <li>Oz</li>
+      <li>Smiling Friends</li>
+      <li>Family Guy</li>
+      <li>Peacemaker</li>
+      <li>Invincible</li>
+      <li>Quite on the Set</li>
+      <li>Days of Our Lives</li>
+      <li>Avatar: The Last Airbender</li>
+    </ul>
+  </div>
+  </column>
+</row>
+<script src="/public/js/dashboard.js"></script>
       </main>
   </body>
 </html>

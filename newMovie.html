@@ -11,28 +11,43 @@
     <!-- FontAwesome library -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/public/css/style.css"/>
   </head>
   <body>
     <nav class="container-fluid flex-column align-items-start">
       <div class="py-2">
       <ul>
-      {{#if loggedIn}}
       <li><a href="/home"><h3>Home</h3></a></li>
       <li><a href="/dashboard"><h3>Dashboard</h3></a></li>
       <li style="float:right"><a href="/logout" id="logout"><h3>Logout</h3></a></li>
-      {{else}}
-      <li><a href="/home"><h3>Home</h3></a></li>
-      <li><a href="/dashboard"><h3>Dashboard</h3></a></li>
       <li style="float:right"><a href="/login" id="login"><h3>Login</h3></a></li>
-      {{/if}}
       </ul>
       </div>
       </nav>
-    <main>
-      <h1>Cinema Tracker</h1>
-      {{{body}}}
-    </main>
-    <script src="/js/script.js"></script>
+      <main class="px-3 py-3">
+        <h1>Cinema Tracker</h1>
+<section id="newMovie">
+    <section class="card">
+      <div class="card-body">
+      <form id="newMovieForm">
+        <div class="form-group mb-2">
+          <label class="form-label" for="movieTitle">Title</label><br>
+          <input class="form-control" type="text" id="movieTitle" placeholder="Enter movie title">
+        </div>
+        <div class="form-group mb-2">
+          <label class="form-label" for="movieSynopsis">Synopsis</label><br>
+          <textarea class="form-control" type="text" id="movieSynopsis" placeholder="Enter movie synopsis"></textarea>
+        </div>
+        <div class="form-group mb-2">
+          <label class="form-label" for="movieDirector">Director</label><br>
+          <input class="form-control" type="text" id="movieDirector" placeholder="Enter movie director">
+        </div>
+        <button class="btn btn-dark" type="submit">Create</button>
+    </form>
+  </div>
+    </section>
+  </section>
+<script src="/public/js/dashboard.js"></script>
+      </main>
   </body>
 </html>
