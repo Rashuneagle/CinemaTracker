@@ -1,0 +1,29 @@
+<row id="show">
+  <column id="showPoster">
+    <section class="card">
+      <img src="{{showImage}}">
+    </section>
+  </column>
+  <column id="showInfo">
+    <section class="card">
+      <div class="card-body">
+        <h3 class="card-title">{{showTitle}} ({{showYear}})</h3><br/>
+        <h4>Synopsis:</h4>
+        <p>{{showSynopsis}}</p><br/>
+        <h4>Created by:</h4>
+        <p>{{showCreator}}</p><br/>
+        <h4>Written by:</h4>
+        {{#each showWriter}}
+        <p>{{showWriterName}}</p>
+        {{/each}}
+        <br/>
+        <h4>Cast:</h4>
+        <ul>
+          {{#each showActor}}
+          <li>{{showActorName}}</li>
+          {{/each}}
+        </ul>
+      </div>
+  </section>
+  </column>
+</row>

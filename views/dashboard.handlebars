@@ -1,42 +1,68 @@
-<h1>Dashboard</h1>
-<section id="existingblogs">
+<row id="movies">
+<column id="recentlyAdded">
   <section class="card">
       <div class="card-body">
         <h3 class="card-title">Recently Added</h3>
-        <table style="width:100%;">
+        <table>
+          {{#each movies}}
           <tr>
-            <td style="float:left;width:33.33%;padding:5px;">
-              <img src="/assets/movie-poster-jaws.jpg" style="width:100%;">
-            </td>
-            <td style="float:left;width:33.33%;padding:5px;">
-              <img src="/assets/sub-buzz-817-1649105149-10.jpg" style="width:100%;">
-            </td>
-            <td style="float:left;width:33.33%;padding:5px;">
-              <img src="/assets/titanic.webp" style="width:100%;">
+            <td>
+              <a href="/movies/{{id}}" class="card-body">
+              <img src="{{movieImage}}">
+              </a>
             </td>
           </tr>
+          {{/each}}
         </table>
-        <p class="card-text">{{content}}</p>
       </div>
   </section>
-</section>
-<section id="createNew" class="card text-center">
+</column>
+<column id="favorites" class="card">
   <div class="card-body">
-  <h3 class="card-title">Create New Post</h3>
-  <form id="newBlog">
-    <div class="card-text"></div>
-      <label for="title">Title</label><br>
-      <input type="text" id="title" placeholder="title">
-    </div>
-    <div class="card-text"></div>
-      <label for="content">Content</label>
-    <textarea id="content" placeholder="content"></textarea>
-    </div>
-    <button id="create">Create</button>
-</form>
+  <h3 class="card-title text-center">My Favorites</h3>
+  <ul>
+    {{#each movies}}
+    <li>
+      {{#if favorite}}
+      <a href="/movies/{{id}}">{{movieTitle}}</a>
+      {{/if}}
+    </li>
+    {{/each}}
+  </ul>
 </div>
-</section>
-<form id="newpost">
-    <button>+ New Post</button>
-</form>
-<script src="/js/dashboard.js"></script>
+</column>
+</row>
+<row id="shows">
+  <column id="recentlyAdded">
+    <section class="card">
+      <div class="card-body">
+        <h3 class="card-title">Recently Added</h3>
+        <table>
+          {{#each shows}}
+          <tr>
+            <td>
+              <a href="/shows/{{id}}" class="card-body">
+              <img src="{{showImage}}">
+              </a>
+            </td>
+          </tr>
+          {{/each}}
+        </table>
+      </div>
+    </section>
+  </column>
+  <column id="favorites" class="card">
+  <div class="card-body">
+  <h3 class="card-title text-center">My Favorites</h3>
+  <ul>
+    {{#each shows}}
+    <li>
+      {{#if favorite}}
+      <a href="/shows/{{id}}">{{showTitle}}</a>
+      {{/if}}
+    </li>
+    {{/each}}
+  </ul>
+</div>
+</column>
+</row>
