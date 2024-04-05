@@ -26,34 +26,59 @@
       </nav>
       <main class="px-3 py-3">
         <h1>Cinema Tracker</h1>
-<row id="movie">
-  <column id="moviePoster">
+<row id="myStuff">
+  <column id="myMovies">
     <section class="card">
-      <img src="/assets/movie-poster-jaws.jpg">
+        <div class="card-body">
+          <h3 class="card-title">My Movies</h3>
+          <table>
+            <tr>
+              <td>
+                <img src="/assets/movie-poster-jaws.jpg">
+              </td>
+              <td>
+                <img src="/assets/sub-buzz-817-1649105149-10.jpg">
+              </td>
+              <td>
+                <img src="/assets/titanic.webp">
+              </td>
+            </tr>
+          </table>
+        </div>
     </section>
+    <br/>
+    <div class="btn-container">
+      <button class="btn btn-dark">+ Add Movie</button>
+      <button class="btn btn-dark">- Delete Movie</button>
+    </div>
   </column>
-  <column id="movieInfo">
+  <column id="myShows">
     <section class="card">
-      <div class="card-body">
-        <h3 class="card-title">Jaws (1975)</h3><br/>
-        <h4>Synopsis:</h4>
-        <p>When a young woman is killed by a shark while skinny-dipping near the New England tourist town of Amity Island, police chief Martin Brody (Roy Scheider) wants to close the beaches, but mayor Larry Vaughn (Murray Hamilton) overrules him, fearing that the loss of tourist revenue will cripple the town. Ichthyologist Matt Hooper (Richard Dreyfuss) and grizzled ship captain Quint (Robert Shaw) offer to help Brody capture the killer beast, and the trio engage in an epic battle of man vs. nature.</p><br/>
-        <h4>Directed by:</h4>
-        <p>Steven Spielberg</p><br/>
-        <h4>Written by:</h4>
-        <p>Peter Benchley, Carl Gottlieb</p><br/>
-        <h4>Cast:</h4>
-        <ul>
-          <li>Roy Scheider as Brody</li>
-          <li>Richard Dreyfuss as Hooper</li>
-          <li>Robert Shaw as Quint</li>
-          <li>Lorraine Gary as Ellen Brody</li>
-          <li>Murray Hamilton as Vaughn</li>
-        </ul>
-      </div>
-  </section>
+        <div class="card-body">
+          <h3 class="card-title">My Shows</h3>
+          <table>
+            <tr>
+              <td>
+                <img src="/assets/the-sopranos.jpg">
+              </td>
+              <td>
+                <img src="/assets/the-walking-dead.jpg">
+              </td>
+              <td>
+                <img src="/assets/smiling-friends.jpg">
+              </td>
+            </tr>
+          </table>
+        </div>
+    </section>
+    <br/>
+    <div class="btn-container">
+      <button class="btn btn-dark">+ Add Show</button>
+      <button class="btn btn-dark">- Delete Show</button>
+    </div>
   </column>
 </row>
+<br/>
 <script src="/public/js/dashboard.js"></script>
       </main>
   </body>

@@ -1,68 +1,48 @@
-<row id="movies">
-<column id="recentlyAdded">
-  <section class="card">
-      <div class="card-body">
-        <h3 class="card-title">Recently Added</h3>
-        <table>
-          {{#each movies}}
-          <tr>
+<row id="myStuff">
+  <column id="myMovies">
+    <section class="card">
+        <div class="card-body">
+          <h3 class="card-title">My Movies</h3>
+          <table>
+            <tr>
+              {{#each movies}}
             <td>
               <a href="/movies/{{id}}" class="card-body">
               <img src="{{movieImage}}">
               </a>
             </td>
-          </tr>
           {{/each}}
-        </table>
-      </div>
-  </section>
-</column>
-<column id="favorites" class="card">
-  <div class="card-body">
-  <h3 class="card-title text-center">My Favorites</h3>
-  <ul>
-    {{#each movies}}
-    <li>
-      {{#if favorite}}
-      <a href="/movies/{{id}}">{{movieTitle}}</a>
-      {{/if}}
-    </li>
-    {{/each}}
-  </ul>
-</div>
-</column>
-</row>
-<row id="shows">
-  <column id="recentlyAdded">
+            </tr>
+          </table>
+        </div>
+    </section>
+    <br/>
+    <div class="btn-container">
+      <button class="btn btn-dark">+ Add Movie</button>
+      <button class="btn btn-dark">- Delete Movie</button>
+    </div>
+  </column>
+  <column id="myShows">
     <section class="card">
-      <div class="card-body">
-        <h3 class="card-title">Recently Added</h3>
-        <table>
-          {{#each shows}}
-          <tr>
+        <div class="card-body">
+          <h3 class="card-title">My Shows</h3>
+          <table>
+            <tr>
+              {{#each shows}}
             <td>
               <a href="/shows/{{id}}" class="card-body">
               <img src="{{showImage}}">
               </a>
             </td>
-          </tr>
           {{/each}}
-        </table>
-      </div>
+            </tr>
+          </table>
+        </div>
     </section>
+    <br/>
+    <div class="btn-container">
+      <button class="btn btn-dark">+ Add Show</button>
+      <button class="btn btn-dark">- Delete Show</button>
+    </div>
   </column>
-  <column id="favorites" class="card">
-  <div class="card-body">
-  <h3 class="card-title text-center">My Favorites</h3>
-  <ul>
-    {{#each shows}}
-    <li>
-      {{#if favorite}}
-      <a href="/shows/{{id}}">{{showTitle}}</a>
-      {{/if}}
-    </li>
-    {{/each}}
-  </ul>
-</div>
-</column>
 </row>

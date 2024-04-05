@@ -1,41 +1,5 @@
-var login = document.querySelector("#login");
-var signup = document.querySelector("#signup");
-var newMovie = document.querySelector("#newMovie");
-
-function hideCreateNew() {
-  createNew.hidden=true;
-}
-
-hideCreateNew();
-
-newMovie.addEventListener("submit", event => {
-  var title = document.querySelector("#title").value;
-  var content = document.querySelector("#content").value;
-  event.preventDefault();
-  console.log('click');
-  if (!title || !content) {
-    alert('Please enter both the title and content!');
-    return;
-  }
-  const blogObj = {
-    title: title,
-    content: content,
-  }
-  fetch('/api/blogs', {
-    method:'POST',
-    body:JSON.stringify(blogObj),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  }).then(res => {
-    if(res.ok){
-      createNew.setAttribute('hidden', 'false');
-      location.reload();
-    } else {
-      alert('Error - Please Try Again');
-    }
-  })
-})
+var login = document.querySelector("#login-form");
+var signup = document.querySelector("#signup-form");
 
 login.addEventListener("submit", event => {
   event.preventDefault();
