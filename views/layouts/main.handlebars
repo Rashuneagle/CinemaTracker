@@ -33,6 +33,8 @@
       <h1>Cinema Tracker</h1>
       {{{body}}}
     </main>
-    <script src="/js/script.js"></script>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 </html>

@@ -1,0 +1,68 @@
+<row id="movies">
+<column id="recentlyAdded">
+  <section class="card">
+      <div class="card-body">
+        <h3 class="card-title">Recently Added</h3>
+        <table>
+          {{#each movies}}
+          <tr>
+            <td>
+              <a href="/movies/{{id}}" class="card-body">
+              <img src="{{movieImage}}">
+              </a>
+            </td>
+          </tr>
+          {{/each}}
+        </table>
+      </div>
+  </section>
+</column>
+<column id="favorites" class="card">
+  <div class="card-body">
+  <h3 class="card-title text-center">My Favorites</h3>
+  <ul>
+    {{#each movies}}
+    <li>
+      {{#if favorite}}
+      <a href="/movies/{{id}}">{{movieTitle}}</a>
+      {{/if}}
+    </li>
+    {{/each}}
+  </ul>
+</div>
+</column>
+</row>
+<row id="shows">
+  <column id="recentlyAdded">
+    <section class="card">
+      <div class="card-body">
+        <h3 class="card-title">Recently Added</h3>
+        <table>
+          {{#each shows}}
+          <tr>
+            <td>
+              <a href="/shows/{{id}}" class="card-body">
+              <img src="{{showImage}}">
+              </a>
+            </td>
+          </tr>
+          {{/each}}
+        </table>
+      </div>
+    </section>
+  </column>
+  <column id="favorites" class="card">
+  <div class="card-body">
+  <h3 class="card-title text-center">My Favorites</h3>
+  <ul>
+    {{#each shows}}
+    <li>
+      {{#if favorite}}
+      <a href="/shows/{{id}}">{{showTitle}}</a>
+      {{/if}}
+    </li>
+    {{/each}}
+  </ul>
+</div>
+</column>
+</row>

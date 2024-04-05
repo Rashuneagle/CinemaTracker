@@ -49,7 +49,7 @@
   nav .active {
   background-color: #04AA6D;
   }
-  #movies:after, #shows:after {
+  #movies:after, #shows:after, #myStuff:after {
   content:"";
   display:table;
   clear:both;
@@ -75,6 +75,36 @@
   #favorites li {
   padding:10px;
   }
+  .btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .btn-container .btn {
+  margin: 5px;
+  }
+  /* Styling dashboard */
+  #myMovies {
+  width: 50%;
+  float: left;
+  padding-right: 10px;
+  }
+  #myShows {
+  width: 50%;
+  float: right;
+  padding-left: 10px;
+  }
+  #myMovies table, #myShows table {
+  width: 100%;
+  }
+  #myMovies table td, #myShows table td {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  }
+  #myMovies img, #myShows img {
+  width: 100%;
+  }
   /*Styling Sign Up Form*/
   #login{
   width: 50%;
@@ -98,9 +128,9 @@
   width: 100%;
   }
   #movie:after {
-    content:"";
-    display:table;
-    clear:both;
+  content:"";
+  display:table;
+  clear:both;
   }
   #moviePoster{
   width: 50%;
