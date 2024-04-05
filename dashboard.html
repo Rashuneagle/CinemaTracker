@@ -26,11 +26,11 @@
       </nav>
       <main class="px-3 py-3">
         <h1>Cinema Tracker</h1>
-<row id="movies">
-  <column id="recentlyAdded">
+<row id="myStuff">
+  <column id="myMovies">
     <section class="card">
         <div class="card-body">
-          <h3 class="card-title">Recently Added</h3>
+          <h3 class="card-title">My Movies</h3>
           <table>
             <tr>
               <td>
@@ -46,31 +46,16 @@
           </table>
         </div>
     </section>
+    <br/>
+    <div class="btn-container">
+      <button class="btn btn-dark">+ Add Movie</button>
+      <button class="btn btn-dark">- Delete Movie</button>
+    </div>
   </column>
-  <column id="favorites" class="card">
-    <div class="card-body">
-    <h3 class="card-title text-center">My Favorites</h3>
-    <ul>
-      <li>The Godfather</li>
-      <li>Citizen Kane</li>
-      <li>RoboCop</li>
-      <li>The Terminator</li>
-      <li>Young Frankenstein</li>
-      <li>Dracula</li>
-      <li>Platoon</li>
-      <li>The Great Escape</li>
-      <li>Die Hard</li>
-      <li>12 Angry Men</li>
-    </ul>
-  </div>
-  </column>
-</row>
-<br/>
-<row id="shows">
-  <column id="recentlyAdded">
+  <column id="myShows">
     <section class="card">
         <div class="card-body">
-          <h3 class="card-title">Recently Added</h3>
+          <h3 class="card-title">My Shows</h3>
           <table>
             <tr>
               <td>
@@ -86,25 +71,14 @@
           </table>
         </div>
     </section>
-  </column>
-  <column id="favorites" class="card">
-    <div class="card-body">
-    <h3 class="card-title text-center">My Favorites</h3>
-    <ul>
-      <li>The Sopranos</li>
-      <li>The Walking Dead</li>
-      <li>Oz</li>
-      <li>Smiling Friends</li>
-      <li>Family Guy</li>
-      <li>Peacemaker</li>
-      <li>Invincible</li>
-      <li>Quite on the Set</li>
-      <li>Days of Our Lives</li>
-      <li>Avatar: The Last Airbender</li>
-    </ul>
-  </div>
+    <br/>
+    <div class="btn-container">
+      <button class="btn btn-dark">+ Add Show</button>
+      <button class="btn btn-dark">- Delete Show</button>
+    </div>
   </column>
 </row>
+<br/>
 <script src="/public/js/dashboard.js"></script>
       </main>
   </body>

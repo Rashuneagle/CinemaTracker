@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema Tracker</title>
+    <!-- Google Font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <!-- Bootstrap library -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- FontAwesome library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/public/css/style.css"/>
+  </head>
+  <body>
+    <nav class="container-fluid flex-column align-items-start">
+      <div class="py-2">
+      <ul>
+      <li><a href="/"><h3>Home</h3></a></li>
+      <li><a href="/dashboard"><h3>Dashboard</h3></a></li>
+      <li style="float:right"><a href="/logout" id="logout"><h3>Logout</h3></a></li>
+      <li style="float:right"><a href="/login" id="login"><h3>Login</h3></a></li>
+      </ul>
+      </div>
+      </nav>
+      <main class="px-3 py-3">
+        <h1>Cinema Tracker</h1>
+<row id="movie">
+  <column id="moviePoster">
+    <section class="card">
+      <img src="/assets/movie-poster-jaws.jpg">
+    </section>
+  </column>
+  <column id="movieInfo">
+    <section class="card">
+      <div class="card-body">
+        <h3 class="card-title">Jaws (1975)</h3><br/>
+        <h4>Synopsis:</h4>
+        <p>When a young woman is killed by a shark while skinny-dipping near the New England tourist town of Amity Island, police chief Martin Brody (Roy Scheider) wants to close the beaches, but mayor Larry Vaughn (Murray Hamilton) overrules him, fearing that the loss of tourist revenue will cripple the town. Ichthyologist Matt Hooper (Richard Dreyfuss) and grizzled ship captain Quint (Robert Shaw) offer to help Brody capture the killer beast, and the trio engage in an epic battle of man vs. nature.</p><br/>
+        <h4>Directed by:</h4>
+        <p>Steven Spielberg</p><br/>
+        <h4>Written by:</h4>
+        <p>Peter Benchley, Carl Gottlieb</p><br/>
+        <h4>Cast:</h4>
+        <ul>
+          <li>Roy Scheider as Brody</li>
+          <li>Richard Dreyfuss as Hooper</li>
+          <li>Robert Shaw as Quint</li>
+          <li>Lorraine Gary as Ellen Brody</li>
+          <li>Murray Hamilton as Vaughn</li>
+        </ul>
+      </div>
+  </section>
+  </column>
+</row>
+<script src="/public/js/dashboard.js"></script>
+      </main>
+  </body>
+</html>

@@ -14,7 +14,27 @@
     <link rel="stylesheet" href="/css/style.css"/>
   </head>
   <body>
-    <nav></nav>
-    <main>{{{body}}}</main>
+    <nav class="container-fluid flex-column align-items-start">
+      <div class="py-2">
+      <ul>
+      {{#if loggedIn}}
+      <li><a href="/home"><h3>Home</h3></a></li>
+      <li><a href="/dashboard"><h3>Dashboard</h3></a></li>
+      <li style="float:right"><a href="/logout" id="logout"><h3>Logout</h3></a></li>
+      {{else}}
+      <li><a href="/home"><h3>Home</h3></a></li>
+      <li><a href="/dashboard"><h3>Dashboard</h3></a></li>
+      <li style="float:right"><a href="/login" id="login"><h3>Login</h3></a></li>
+      {{/if}}
+      </ul>
+      </div>
+      </nav>
+    <main>
+      <h1>Cinema Tracker</h1>
+      {{{body}}}
+    </main>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 </html>
