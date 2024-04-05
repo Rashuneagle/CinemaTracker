@@ -4,15 +4,15 @@
       <div class="card-body">
         <h3 class="card-title">Recently Added</h3>
         <table>
-          {{#each movies}}
           <tr>
+          {{#each movies}}
             <td>
               <a href="/movies/{{id}}" class="card-body">
               <img src="{{movieImage}}">
               </a>
             </td>
-          </tr>
           {{/each}}
+          </tr>
         </table>
       </div>
   </section>
@@ -38,15 +38,15 @@
       <div class="card-body">
         <h3 class="card-title">Recently Added</h3>
         <table>
-          {{#each shows}}
           <tr>
+          {{#each shows}}
             <td>
               <a href="/shows/{{id}}" class="card-body">
               <img src="{{showImage}}">
               </a>
             </td>
-          </tr>
           {{/each}}
+          </tr>
         </table>
       </div>
     </section>

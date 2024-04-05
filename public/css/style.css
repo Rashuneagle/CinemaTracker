@@ -146,4 +146,26 @@
   width: 100%;
   padding: 10px;
   }
-  /* Styling New Movie/Show Form */
+  /* Styling Show Listings */
+  #show {
+  width: 100%;
+  }
+  #show:after {
+  content:"";
+  display:table;
+  clear:both;
+  }
+  #showPoster{
+  width: 50%;
+  float: left;
+  padding: 10px;
+  }
+  #showInfo{
+  width: 50%;
+  float: right;
+  padding: 10px;
+  }
+  #showPoster img{
+  width: 100%;
+  padding: 10px;
+  }

@@ -7,9 +7,10 @@ newShow.addEventListener("submit", event => {
   var creator = document.querySelector("#showCreator").value;
   var writer = document.querySelector("#showWriter").value;
   var actors = document.querySelector("#showActors").value;
+  var poster = document.querySelector("#showPoster").value;
   event.preventDefault();
   console.log('click');
-  if (!title || !year || !synopsis || !creator || !writer || !actors) {
+  if (!title || !year || !synopsis || !creator || !writer || !actors || !poster) {
     alert('One of the fields is empty. Please try again!');
     return;
   }
@@ -20,6 +21,7 @@ newShow.addEventListener("submit", event => {
     creator: creator,
     writer: writer,
     actors: actors,
+    poster: poster
   }
   fetch('/api/shows', {
     method:'POST',
