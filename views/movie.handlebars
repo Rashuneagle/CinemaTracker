@@ -13,10 +13,23 @@
         <h4>Directed by:</h4>
         <p>{{movieDirector}}</p><br/>
         <h4>Written by:</h4>
-        <p>{{movieWriterName}}</p><br/>
+        {{#each movieWriter}}
+        <p>{{movieWriter}}</p>
+        {{/each}}<br/>
         <h4>Cast:</h4>
-        <p>{{movieActorName}}</p>
+        <ul>
+          {{#each movieActors}}
+          <li>{{movieActors}}</li>
+          {{/each}}
+        </ul>
+        {{#if favorite}}
+        <h4>One of My Favorites!</h4>
+        {{/if}}
+        {{#if logged_in}}
+        <button class="btn btn-sm btn-danger" data-id="{{movie.id}}">DELETE</button>
+        {{/if}}
       </div>
   </section>
   </column>
 </row>
+<script src="/js/movie.js"></script>
