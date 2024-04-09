@@ -19,11 +19,18 @@
         <br/>
         <h4>Cast:</h4>
         <ul>
-          {{#each showActor}}
-          <li>{{showActorName}}</li>
+          {{#each showActors}}
+          <li>{{showActors}}</li>
           {{/each}}
         </ul>
+        {{#if favorite}}
+          <h4>One of My Favorites!</h4>
+        {{/if}}
+        {{#if logged_in}}
+        <button class="btn btn-sm btn-danger" data-id="{{show.id}}">DELETE</button>
+        {{/if}}
       </div>
   </section>
   </column>
 </row>
+<script src="/js/show.js"></script>
