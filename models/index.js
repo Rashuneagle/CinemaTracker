@@ -1,3 +1,7 @@
-const homeRoutes = require('./User');
+const Movies = require('Movies');
+const Shows = require('Shows');
 
-module.exports = { homeRoutes };
+module.exports = {
+    Movies,
+    Shows,
+};
