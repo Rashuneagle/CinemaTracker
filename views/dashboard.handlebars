@@ -5,21 +5,21 @@
           <h3 class="card-title">My Movies</h3>
           <table>
             <tr>
-              {{#each movies}}
+              {{#each movies as |movie|}}
             <td>
-              <a href="/movies/{{id}}" class="card-body">
+              <a href="/movie/{{movie.id}}" class="card-body">
               <img src="{{movieImage}}">
               </a>
             </td>
           {{/each}}
             </tr>
           </table>
+          <br/>
         </div>
     </section>
     <br/>
     <div class="btn-container">
-      <button class="btn btn-dark">+ Add Movie</button>
-      <button class="btn btn-dark">- Delete Movie</button>
+      <a href="./newMovie"><button class="btn btn-dark">+ Add Movie</button></a>
     </div>
   </column>
   <column id="myShows">
@@ -28,9 +28,9 @@
           <h3 class="card-title">My Shows</h3>
           <table>
             <tr>
-              {{#each shows}}
+              {{#each shows as |show|}}
             <td>
-              <a href="/shows/{{id}}" class="card-body">
+              <a href="/show/{{show.id}}" class="card-body">
               <img src="{{showImage}}">
               </a>
             </td>
@@ -41,8 +41,8 @@
     </section>
     <br/>
     <div class="btn-container">
-      <button class="btn btn-dark">+ Add Show</button>
-      <button class="btn btn-dark">- Delete Show</button>
+      <a href="./newShow"><button class="btn btn-dark">+ Add Show</button></a>
     </div>
   </column>
 </row>
+<script src="/js/dashboard.js"></script>
