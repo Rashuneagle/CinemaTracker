@@ -7,7 +7,7 @@
           <tr>
           {{#each movies}}
             <td>
-              <a href="/movies/{{id}}" class="card-body">
+              <a href="/movie/{{id}}" class="card-body">
               <img src="{{movieImage}}">
               </a>
             </td>
@@ -21,11 +21,15 @@
   <div class="card-body">
   <h3 class="card-title text-center">My Favorites</h3>
   <ul>
-    {{#each movies}}
+    {{#each movies as |movie|}}
+    {{#if favorite}}
     <li>
-      {{#if favorite}}
-      <a href="/movies/{{id}}">{{movieTitle}}</a>
-      {{/if}}
+      <a href="/movie/{{id}}">{{movieTitle}}</a>
+    </li>
+    {{/if}}
+    {{else}}
+    <li>
+      <p>No Favorites</p>
     </li>
     {{/each}}
   </ul>
@@ -39,7 +43,7 @@
         <h3 class="card-title">Recently Added</h3>
         <table>
           <tr>
-          {{#each shows}}
+          {{#each shows as |show|}}
             <td>
               <a href="/shows/{{id}}" class="card-body">
               <img src="{{showImage}}">
@@ -55,11 +59,15 @@
   <div class="card-body">
   <h3 class="card-title text-center">My Favorites</h3>
   <ul>
-    {{#each shows}}
+    {{#each shows as |show|}}
+    {{#if favorite}}
     <li>
-      {{#if favorite}}
       <a href="/shows/{{id}}">{{showTitle}}</a>
-      {{/if}}
+    </li>
+    {{/if}}
+    {{else}}
+    <li>
+      <p>No Favorites</p>
     </li>
     {{/each}}
   </ul>

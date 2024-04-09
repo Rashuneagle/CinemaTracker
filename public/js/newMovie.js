@@ -8,9 +8,10 @@ newMovie.addEventListener("submit", event => {
   var writer = document.querySelector("#movieWriter").value;
   var actors = document.querySelector("#movieActors").value;
   var poster = document.querySelector("#movieImage").value;
+  var favorite = document.querySelector("#movieFavorite").value;
   event.preventDefault();
   console.log('click');
-  if (!title || !year || !synopsis || !director || !writer || !actors || !poster) {
+  if (!title || !year || !synopsis || !director || !writer || !actors || !poster || !favorite) {
     alert('One of the fields is empty. Please try again!');
     return;
   }
@@ -21,9 +22,10 @@ newMovie.addEventListener("submit", event => {
     director: director,
     writer: writer,
     actors: actors,
-    poster: poster
+    poster: poster,
+    favorite: favorite
   }
-  fetch('/api/movies', {
+  fetch('/api/movie', {
     method:'POST',
     body:JSON.stringify(blogObj),
     headers: {
