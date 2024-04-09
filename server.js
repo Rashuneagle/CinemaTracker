@@ -3,15 +3,25 @@ const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
-const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 const passport = require('passport');
-
+const helpers = require('./utils/helpers');
 
 // Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3005;
 
+// Create an instance of Handlebars with helpers
+const hbs = exphbs.create({
+    helpers: {
+        // Register helper functions
+        get_movie_emoji: helpers.get_movie_emoji,
+        get_show_emoji: helpers.get_show_emoji,
+        get_emoji: helpers.get_emoji
+    }
+});
+
+// Set Handlebars as the template engine
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
@@ -20,7 +30,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
-
 
 // Starts the server
 sequelize.sync({ force: false }).then(() => {
