@@ -2,19 +2,20 @@ const { Movies } = require('../models');
 
 const moviesData = [
   {
-    movies_name: 'Shirts',
+    movieTitle: 'Jaws',
+    movieImage: '/assets/movie-poster-jaws.jpg'
   },
   {
-    movies_name: 'Shorts',
+    movieTitle: 'Citizen Kane',
   },
   {
-    movies_name: 'Music',
+    movieTitle: 'Rocky',
   },
   {
-    movies_name: 'Hats',
+    movieTitle: 'Princess Mononoke',
   },
   {
-    movies_name: 'Shoes',
+    movieTitle: 'Spirited Away',
   },
 ];
 
