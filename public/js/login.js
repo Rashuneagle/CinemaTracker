@@ -29,6 +29,7 @@ signup.addEventListener("submit", event => {
   const userObj = {
     username:document.querySelector("#username-signup").value,
     password:document.querySelector("#password-signup").value,
+    email:document.querySelector("#email-signup").value,
   }
   console.log(userObj);
   fetch("/api/users/", {

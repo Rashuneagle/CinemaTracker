@@ -6,11 +6,19 @@ const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const passport = require('passport');
 const helpers = require('./utils/helpers');
+const session = require('express-session');
 
 // Sets up the Express App
 const app = express();
 const PORT = process.env.PORT || 3005;
+// Set up sessions
+const sess = {
+  secret: 'Super secret secret',
+  resave: false,
+  saveUninitialized: false,
+};
 
+app.use(session(sess));
 // Create an instance of Handlebars with helpers
 const hbs = exphbs.create({
     helpers: {
@@ -30,6 +38,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
+
+
 
 // Starts the server
 sequelize.sync({ force: false }).then(() => {
