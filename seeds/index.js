@@ -1,5 +1,5 @@
 const seedMovies = require('./movies');
-const seedShows = require('./shows')
+const seedShows = require('./shows');
 
 const sequelize = require('../config/connection');
 

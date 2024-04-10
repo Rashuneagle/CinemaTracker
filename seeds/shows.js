@@ -2,19 +2,24 @@ const { Shows } = require('../models');
 
 const showsData = [
   {
-    showTitle: 'The Sopranos',
+    showName: 'The Sopranos',
+    showSynopsis: 'New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.'
   },
   {
-    showTitle: 'Smiling Friends',
+    showName: 'The Sopranos',
+    showSynopsis: 'New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.'
   },
   {
-    showTitle: 'The Walking Dead',
+    showName: 'The Sopranos',
+    showSynopsis: 'New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.'
   },
   {
-    showTitle: 'Oz',
+    showName: 'The Sopranos',
+    showSynopsis: 'New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.'
   },
   {
-    showTitle: 'Boardwalk Empire',
+    showName: 'The Sopranos',
+    showSynopsis: 'New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.'
   },
 ];
 

@@ -3,19 +3,23 @@ const { Movies } = require('../models');
 const moviesData = [
   {
     movieTitle: 'Jaws',
-    movieImage: '/assets/movie-poster-jaws.jpg'
+    movieSynopsis: "When a killer shark unleashes chaos on a beach community off Cape Cod, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down."
   },
   {
-    movieTitle: 'Citizen Kane',
+    movieTitle: 'Jaws',
+    movieSynopsis: "When a killer shark unleashes chaos on a beach community off Cape Cod, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down."
   },
   {
-    movieTitle: 'Rocky',
+    movieTitle: 'Jaws',
+    movieSynopsis: "When a killer shark unleashes chaos on a beach community off Cape Cod, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down."
   },
   {
-    movieTitle: 'Princess Mononoke',
+    movieTitle: 'Jaws',
+    movieSynopsis: "When a killer shark unleashes chaos on a beach community off Cape Cod, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down."
   },
   {
-    movieTitle: 'Spirited Away',
+    movieTitle: 'Jaws',
+    movieSynopsis: "When a killer shark unleashes chaos on a beach community off Cape Cod, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down."
   },
 ];
 

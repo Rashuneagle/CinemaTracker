@@ -7,8 +7,8 @@
           <tr>
           {{#each movies as |movie|}}
             <td>
-              <a href="/movies/{{id}}" class="card-body">
-              <img src="{{movieImage}}">
+              <p>{{movieTitle}}</p>
+              <p>{{movieSynopsis}}</p>
               </a>
             </td>
           {{/each}}
@@ -44,8 +44,8 @@
           <tr>
           {{#each shows as |show|}}
             <td>
-              <a href="/shows/{{id}}" class="card-body">
-              <img src="{{showImage}}">
+              <p>{{showName}}</p>
+              <p>{{showSynopsis}}</p>
               </a>
             </td>
           {{/each}}
