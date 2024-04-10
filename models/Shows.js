@@ -11,11 +11,11 @@ Shows.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    showName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    showSynopsis: {
       type: DataTypes.STRING,
     },
     date_created: {

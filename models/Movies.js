@@ -11,11 +11,11 @@ Movies.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    movieTitle: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    movieSynopsis: {
       type: DataTypes.STRING,
     },
     date_created: {

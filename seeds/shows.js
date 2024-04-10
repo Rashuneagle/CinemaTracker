@@ -2,19 +2,24 @@ const { Shows } = require('../models');
 
 const showsData = [
   {
-    shows_name: 'Shirts',
+    showName: 'The Sopranos',
+    showSynopsis: 'New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.'
   },
   {
-    shows_name: 'Shorts',
+    showName: 'The Sopranos',
+    showSynopsis: 'New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.'
   },
   {
-    shows_name: 'Music',
+    showName: 'The Sopranos',
+    showSynopsis: 'New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.'
   },
   {
-    shows_name: 'Hats',
+    showName: 'The Sopranos',
+    showSynopsis: 'New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.'
   },
   {
-    shows_name: 'Shoes',
+    showName: 'The Sopranos',
+    showSynopsis: 'New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.'
   },
 ];
 

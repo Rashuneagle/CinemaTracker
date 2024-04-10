@@ -5,14 +5,13 @@
         <h3 class="card-title">Recently Added</h3>
         <table>
           <tr>
-          {{#each movies}}
+          {{#each movies as |movie|}}
             <td>
-              <a href="/movie/{{id}}" class="card-body">
-              <img src="{{movieImage}}">
+              <p>{{movieTitle}}</p>
+              <p>{{movieSynopsis}}</p>
               </a>
             </td>
           {{/each}}
-          </tr>
         </table>
       </div>
   </section>
@@ -45,8 +44,8 @@
           <tr>
           {{#each shows as |show|}}
             <td>
-              <a href="/shows/{{id}}" class="card-body">
-              <img src="{{showImage}}">
+              <p>{{showName}}</p>
+              <p>{{showSynopsis}}</p>
               </a>
             </td>
           {{/each}}

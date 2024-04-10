@@ -2,19 +2,24 @@ const { Movies } = require('../models');
 
 const moviesData = [
   {
-    movies_name: 'Shirts',
+    movieTitle: 'Jaws',
+    movieSynopsis: "When a killer shark unleashes chaos on a beach community off Cape Cod, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down."
   },
   {
-    movies_name: 'Shorts',
+    movieTitle: 'Jaws',
+    movieSynopsis: "When a killer shark unleashes chaos on a beach community off Cape Cod, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down."
   },
   {
-    movies_name: 'Music',
+    movieTitle: 'Jaws',
+    movieSynopsis: "When a killer shark unleashes chaos on a beach community off Cape Cod, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down."
   },
   {
-    movies_name: 'Hats',
+    movieTitle: 'Jaws',
+    movieSynopsis: "When a killer shark unleashes chaos on a beach community off Cape Cod, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down."
   },
   {
-    movies_name: 'Shoes',
+    movieTitle: 'Jaws',
+    movieSynopsis: "When a killer shark unleashes chaos on a beach community off Cape Cod, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down."
   },
 ];
 
