@@ -2,19 +2,19 @@ const { Shows } = require('../models');
 
 const showsData = [
   {
-    shows_name: 'Shirts',
+    shows_name: 'Ozark',
   },
   {
-    shows_name: 'Shorts',
+    shows_name: 'Black Mirror',
   },
   {
-    shows_name: 'Music',
+    shows_name: 'The Walking Dead',
   },
   {
-    shows_name: 'Hats',
+    shows_name: 'Breaking Bad',
   },
   {
-    shows_name: 'Shoes',
+    shows_name: 'Law & Order',
   },
 ];
 

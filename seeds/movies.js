@@ -2,19 +2,19 @@ const { Movies } = require('../models');
 
 const moviesData = [
   {
-    movies_name: 'Shirts',
+    movies_name: 'Kill Bill',
   },
   {
-    movies_name: 'Shorts',
+    movies_name: 'Titanic',
   },
   {
-    movies_name: 'Music',
+    movies_name: '21 Jump Street',
   },
   {
-    movies_name: 'Hats',
+    movies_name: 'Bird Box',
   },
   {
-    movies_name: 'Shoes',
+    movies_name: 'The Hangover',
   },
 ];
 
