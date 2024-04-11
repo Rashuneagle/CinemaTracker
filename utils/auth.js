@@ -6,9 +6,8 @@ const withAuth = async (req, res, next) => {
       // If not logged in, redirect to the login page
       return res.redirect('/login');
     }
-
     // Fetch user data if needed
-    const userData = await User.findByPk(req.session.userId);
+    //const userData = await User.findByPk(req.session.userId);
 
     // Render the dashboard template with user data
     res.render('dashboard', {
@@ -16,7 +15,7 @@ const withAuth = async (req, res, next) => {
       loggedIn: req.session.loggedIn,
 
       // Pass user data if available, otherwise pass null
-      user: userData ? userData.get({ plain: true }) : null
+   //   user: userData ? userData.get({ plain: true }) : null
     });
   } catch (error) {
     // Handle errors
