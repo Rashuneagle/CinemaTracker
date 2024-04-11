@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Movies } = require('../../models');
+const { Movie } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newMovie = await Movies.create({
-      ...req.description,
+    const newMovie = await Movie.create({
+      ...req.body,
       user_id: req.session.user_id,
     });
 
@@ -17,19 +17,19 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const moviesData = await Movies.destroy({
+    const movieData = await Movie.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!moviesData) {
+    if (!movieData) {
       res.status(404).json({ message: 'No movie found with this id!' });
       return;
     }
 
-    res.status(200).json(moviesData);
+    res.status(200).json(movieData);
   } catch (err) {
     res.status(500).json(err);
   }

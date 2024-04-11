@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Jaws",
+    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
+    "year": "1975"
+  },
+  {
+    "name": "The Godfather",
+    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
+    "year": "1972"
+  },
+  {
+    "name": "Citizen Kane",
+    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
+    "year": "1941"
+  }
+]
