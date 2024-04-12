@@ -2,11 +2,11 @@ const router = require('express').Router();
 const { Movie } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const newMovie = await Movie.create({
       ...req.body,
-      user_id:1
+      user_id: req.session.user_id // Assign the logged-in user's ID to the new movie
     });
 
     res.status(200).json(newMovie);
@@ -15,12 +15,14 @@ router.post('/', async (req, res) => {
   }
 });
 
+
+// DELETE route to delete a movie
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const movieData = await Movie.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
+        user_id: req.session.user_id, // Ensure the movie belongs to the logged-in user
       },
     });
 
@@ -34,7 +36,5 @@ router.delete('/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
 
 module.exports = router;

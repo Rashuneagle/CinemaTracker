@@ -79,4 +79,9 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/newMovie', withAuth, (req, res) => {
+  res.render('newMovie', { logged_in: true });
+});
+
+
 module.exports = router;
