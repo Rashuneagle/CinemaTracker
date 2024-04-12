@@ -38,9 +38,20 @@ const delButtonHandler = async (event) => {
   }
 };
 
-document
-  .querySelector('.new-movie-form')
-  .addEventListener('submit', newFormHandler);
+document.addEventListener('DOMContentLoaded', () => {
+  // Ensure the element exists before adding the event listener
+  const newMovieForm = document.querySelector("#newMovieForm");
+  
+  if (newMovieForm) { // Check if the element is found
+    newMovieForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      // form handling code
+    });
+  } else {
+    console.error('Error: #newMovieForm not found.');
+  }
+});
 
 document
   .querySelector('.movie-list')
