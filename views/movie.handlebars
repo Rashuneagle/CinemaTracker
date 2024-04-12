@@ -1,35 +1,9 @@
-<row id="movie">
-  <column id="moviePoster">
-    <section class="card">
-      <img src="{{movieImage}}">
-    </section>
-  </column>
-  <column id="movieInfo">
-    <section class="card">
-      <div class="card-body">
-        <h3 class="card-title">{{movieTitle}} ({{movieYear}})</h3><br/>
-        <h4>Synopsis:</h4>
-        <p>{{movieSynopsis}}</p><br/>
-        <h4>Directed by:</h4>
-        <p>{{movieDirector}}</p><br/>
-        <h4>Written by:</h4>
-        {{#each movieWriter}}
-        <p>{{movieWriter}}</p>
-        {{/each}}<br/>
-        <h4>Cast:</h4>
-        <ul>
-          {{#each movieActors}}
-          <li>{{movieActors}}</li>
-          {{/each}}
-        </ul>
-        {{#if favorite}}
-        <h4>One of My Favorites!</h4>
-        {{/if}}
-        {{#if logged_in}}
-        <button class="btn btn-sm btn-danger" data-id="{{movie.id}}">DELETE</button>
-        {{/if}}
-      </div>
-  </section>
-  </column>
-</row>
-<script src="/js/movie.js"></script>
+<div class="text-center">
+  <h2>{{name}} ({{year}})</h2>
+  <p>{{{get_emoji}}}</p>
+  <p>{{description}}</p>
+  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <p>
+    <button class="btn btn-primary">Fund this Project!</button>
+  </p>
+</div>
